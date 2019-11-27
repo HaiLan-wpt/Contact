@@ -42,9 +42,10 @@
         <div class="form-group">
             <label for="birthplace">籍贯：</label>
             <select name="birthplace" class="form-control">
-                <option value="广州"   ${contact.gender=="广州"?"checked":"" } >广州</option>
-                <option value="上海"   ${contact.gender=="上海"?"checked":"" } >上海</option>
-                <option value="北京"   ${contact.gender=="北京"?"checked":"" } >北京</option>
+                <option value="广州"   ${contact.birthplace=='广州'?'selected':'' } >广州</option>
+                <option value="上海"   ${contact.birthplace=='上海'?'selected':'' } >上海</option>
+                <option value="北京"   ${contact.birthplace=='北京'?'selected':'' } >北京</option>
+                <option ></option>
             </select>
         </div>
 

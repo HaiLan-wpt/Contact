@@ -22,12 +22,10 @@
         }
     </style>
     <script>
-        function delContact(contactId) {
+        function delContact(contactId,currentPage,pageSize) {
             var flag = window.confirm("确定要删除么");
             if (flag) {
-                location.href = "delete_contact_info?id=" + contactId;
-            } else {
-                location.href = "change_page_size";
+                location.href = "delete_contact_info?id=" + contactId+"&currentPage="+currentPage+"&pageSize="+pageSize;
             }
         }
 
@@ -66,7 +64,7 @@
                 <td>${contact.email}</td>
                 <td>
                     <a class="btn btn-default btn-sm" href="update_query?id=${contact.id}">修改</a>
-                    <a class="btn btn-default btn-sm" href="javascript:;" onclick="delContact(${contact.id})">删除</a>
+                    <a class="btn btn-default btn-sm" href="javascript:;" onclick="delContact(${contact.id},${currentPage},${pageSize})">删除</a>
                 </td>
             </tr>
         </c:forEach>
